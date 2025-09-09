@@ -1,0 +1,179 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #e8f5e9;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #2e7d32;
+}
+
+.screen {
+  padding: 20px;
+  max-width: 400px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+input, select, button {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #388e3c;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.backBtn, .menuBtn {
+  background:#2E7D32;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  width:50px;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 180px;
+  background: #fff;
+  border-left: 2px solid #4caf50;
+  height: 100%;
+  padding: 20px;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+.side-menu button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.show-pass {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.help-text {
+  font-size: 13px;
+  color: red;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  text-align: left;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.token-box {
+  background: #f1f8e9;
+  border: 2px dashed #388e3c;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  word-break: break-all;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.sensors {
+  margin-top: 20px;
+}
+
+/* Chat box */
+.chat-box {
+  width: 90%;
+  height: 250px;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  padding: 10px;
+  overflow-y: auto;
+  text-align: left;
+}
+.chat-message {
+  margin: 5px 0;
+}
+.chat-user {
+  font-weight: bold;
+  color: #1b5e20;
+}
+.chat-bot {
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+/* Plant gallery */
+.plant-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 15px;
+}
+.plant-gallery button {
+  border: none;
+  background: #f1f8e9;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.plant-gallery button:hover {
+  background: #c8e6c9;
+}
+.plant-gallery img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.plant-gallery p {
+  margin: 8px 0 0;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+/* Plant detail */
+.plant-detail {
+  margin-top: 20px;
+}
+.plant-detail img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+}
