@@ -8,49 +8,59 @@
 </head>
 <body>
   <!-- LOGIN / SIGNUP SCREEN -->
-  <div id="authScreen" class="screen">
-    <h1>Boltay Poday 🌿</h1>
-    <p id="authTitle">Login</p>
+<div id="authScreen" class="screen">
+  <!-- Background Video -->
+  <!-- <video autoplay muted loop id="bgVideo">
+    <source src="images/login.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video> -->
+  <img id="bgimage" src="images/main.png"/>
+
+  <!-- Form Content -->
+  <div class="auth-content">
+    <img class="logo" src="images/colored-logo.png" />
+    <p id="authTitle" style="color: white;">Login</p>
 
     <input type="email" id="email" placeholder="Email" required />
     <input type="password" id="password" placeholder="Password" required />
     <p id="passwordHelp" class="help-text"></p>
     <input type="password" id="confirmPassword" placeholder="Confirm Password" class="hidden" />
 
-    <label class="show-pass">
+    <label class="show-pass" style="color:#C7CBD1;">
       <input type="checkbox" id="showPassword" /> Show Password
     </label>
 
     <button id="authBtn">Login</button>
-    <p>Don’t have an account? <span id="toggleAuth">Sign up</span></p>
+    <p style="color:#fff">Don’t have an account? <span id="toggleAuth" style="color:lightgreen;">Sign up</span></p>
     <p id="authMessage"></p>
   </div>
+</div>
+
 
   <!-- HOME SCREEN -->
-  <div id="homeScreen" class="screen hidden">
+  <div id="homeScreen" class="screen hidden bg-home"  >
     <header>
       <button class="backBtn" onclick="goBack()">⬅</button>
       <h1>Home</h1>
       <button class="menuBtn" onclick="toggleMenu()">☰</button>
     </header>
-    <div class="content">
-      <img src="https://img.icons8.com/fluency/96/plant-under-sun.png" alt="Plant IoT" />
+    <div class="content"><br><br><br><br>
       <h2>Welcome to Smart Gardening with <b>BOLTAY PODAY</b></h2>
       <button id="gotoTemplateBtn">Go to Template</button>
       <button id="gotoChatBtn">Plant Doctor 🌱</button>
-      <button id="gotoPlantsBtn">Plants Information</button>
+      <button id="gotoPlantsBtn">Plants Information</button><br><br><br><br>
     </div>
   </div>
 
   <!-- TEMPLATE SELECTION SCREEN -->
-  <div id="templateScreen" class="screen hidden">
+  <div id="templateScreen" class="screen hidden bg">
     <header>
       <button class="backBtn" onclick="goBack()">⬅</button>
-      <h1>Template Selection</h1>
+      <h1>Template </br>Selection</h1>
       <button class="menuBtn" onclick="toggleMenu()">☰</button>
     </header>
     <h2>Select Your Template 🌱</h2>
-    <select id="templateSelect">
+    <select id="templateSelect" >
       <option value="">--Choose Template--</option>
       <option value="temp_moisture_humidity">Temperature + Moisture + Humidity</option>
       <option value="ph_temp_moisture">pH Value + Temperature + Moisture</option>
@@ -61,7 +71,7 @@
   </div>
 
   <!-- DASHBOARD SCREEN -->
-  <div id="dashboardScreen" class="screen hidden">
+  <div id="dashboardScreen" class="screen hidden bg">
     <header>
       <button class="backBtn" onclick="goBack()">⬅</button>
       <h1>Boltay Poday Dashboard 🌱</h1>
@@ -100,43 +110,43 @@
   </div>
 
   <!-- PLANTS INFO SCREEN -->
-  <div id="infoScreen" class="screen hidden">
+  <div id="infoScreen" class="screen hidden bg-home">
     <header>
       <button class="backBtn" onclick="goBack()">⬅</button>
-      <h1>Plants Information 🌿</h1>
+      <h1>Plants<br> Information 🌿</h1>
       <button class="menuBtn" onclick="toggleMenu()">☰</button>
     </header>
-    <h2 style="text-align:center; margin-top:10px;">Select a Plant</h2>
+    <h2 style="text-align:center; margin-top:10px; color: white;">Select a Plant</h2>
     <div class="plant-gallery">
       <button onclick="showPlantInfo('Peace Lily')">
-        <img src="https://i.ibb.co/7WBN6Pz/peace-lily.jpg" alt="Peace Lily" />
+        <img src="images/peace_lily.png" alt="Peace Lily" />
         <p>Peace Lily</p>
       </button>
       <button onclick="showPlantInfo('Areca Palm')">
-        <img src="https://i.ibb.co/8Nk8fnp/areca-palm.jpg" alt="Areca Palm" />
+        <img src="images/areca_palm.png" alt="Areca Palm" />
         <p>Areca Palm</p>
       </button>
       <button onclick="showPlantInfo('Snake Plant')">
-        <img src="https://i.ibb.co/YQ3Kj6d/snake-plant.jpg" alt="Snake Plant" />
+        <img src="images/snake_plant.png" alt="Snake Plant" />
         <p>Snake Plant</p>
       </button>
       <button onclick="showPlantInfo('Aloe Vera')">
-        <img src="https://i.ibb.co/WgPqCFW/aloevera.jpg" alt="Aloe Vera" />
+        <img src="images/aloe_vera.png" alt="Aloe Vera" />
         <p>Aloe Vera</p>
       </button>
       <button onclick="showPlantInfo('Spider Plant')">
-        <img src="https://i.ibb.co/kc3f1v2/spider-plant.jpg" alt="Spider Plant" />
+        <img src="images/spider_plant.png" alt="Spider Plant" />
         <p>Spider Plant</p>
       </button>
       <button onclick="showPlantInfo('Money Plant')">
-        <img src="https://i.ibb.co/ykhTR4N/money-plant.jpg" alt="Money Plant" />
+        <img src="images/money_plant.png" alt="Money Plant" />
         <p>Money Plant</p>
       </button>
     </div>
   </div>
 
   <!-- PLANT DETAIL SCREEN -->
-  <div id="plantDetailScreen" class="screen hidden">
+  <div id="plantDetailScreen" class="screen hidden bg-home">
     <header>
       <button class="backBtn" onclick="goBack()">⬅</button>
       <h1 id="plantDetailTitle">Plant Detail</h1>
