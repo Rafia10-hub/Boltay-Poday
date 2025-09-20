@@ -202,41 +202,82 @@ document.getElementById("gotoPlantsBtn").addEventListener("click", () => {
   showScreen("infoScreen");
 });
 
-// Plant Data
+// ✅ Plants Data (Detailed)
 const plantData = {
   "Peace Lily": {
-    img: "https://i.ibb.co/7WBN6Pz/peace-lily.jpg",
-    info: "Peace Lily helps purify the air and thrives in low light. Water when soil feels dry."
+    img: "images/peace_lily.png",
+    description: "Peace Lily is a popular indoor plant with glossy leaves and elegant white blooms.",
+    light: "Thrives in medium to low indirect light. Avoid direct sunlight.",
+    water: "About 2 times per week. Keep soil moist but not soggy.",
+    care: "Mist occasionally, trim yellow leaves, fertilize monthly in spring & summer.",
+    benefits: "Excellent air purifier, improves humidity indoors.",
+    caution: "Toxic to pets and children if ingested."
   },
   "Areca Palm": {
-    img: "https://i.ibb.co/8Nk8fnp/areca-palm.jpg",
-    info: "Areca Palm is a natural humidifier and needs bright indirect sunlight with regular watering."
+    img: "images/areca_palm.png",
+    description: "Areca Palm is a graceful, pet-friendly palm that grows well indoors.",
+    light: "Bright indirect sunlight is ideal.",
+    water: "Water 2–3 times per week, keep soil slightly moist.",
+    care: "Repot every 2–3 years, avoid overwatering.",
+    benefits: "Natural humidifier, improves air quality, safe for pets.",
+    caution: "Prone to root rot if overwatered."
   },
   "Snake Plant": {
-    img: "https://i.ibb.co/YQ3Kj6d/snake-plant.jpg",
-    info: "Snake Plant improves air quality at night. Water sparingly as it stores water in leaves."
+    img: "images/snake_plant.png",
+    description: "Snake Plant is a hardy succulent with upright sword-like leaves.",
+    light: "Tolerates low light, prefers indirect sunlight.",
+    water: "Once every 10–14 days. Let soil dry completely before watering.",
+    care: "Very low maintenance, avoid cold drafts.",
+    benefits: "Releases oxygen at night, removes toxins from air.",
+    caution: "Toxic to pets if chewed or ingested."
   },
   "Aloe Vera": {
-    img: "https://i.ibb.co/WgPqCFW/aloevera.jpg",
-    info: "Aloe Vera is a medicinal plant that prefers sunlight. Water deeply but infrequently."
+    img: "images/aloe_vera.png",
+    description: "Aloe Vera is a medicinal succulent plant with thick fleshy leaves.",
+    light: "Prefers bright, direct to indirect sunlight.",
+    water: "Every 2–3 weeks, allow soil to dry out fully between waterings.",
+    care: "Use well-draining soil, trim dead leaves, repot if root-bound.",
+    benefits: "Medicinal uses for burns, skincare, and detox.",
+    caution: "Gel is safe, but whole plant is mildly toxic to pets."
   },
   "Spider Plant": {
-    img: "https://i.ibb.co/kc3f1v2/spider-plant.jpg",
-    info: "Spider Plant is resilient, grows well in indirect sunlight and removes indoor toxins."
+    img: "images/spider_plant.png",
+    description: "Spider Plant is a resilient houseplant that produces small baby plants.",
+    light: "Indirect sunlight, grows well indoors.",
+    water: "1–2 times per week, let soil dry slightly between watering.",
+    care: "Trim brown tips, propagate using baby spiderettes.",
+    benefits: "Excellent toxin remover, safe for pets.",
+    caution: "Generally safe, but cats may chew leaves."
   },
   "Money Plant": {
-    img: "https://i.ibb.co/ykhTR4N/money-plant.jpg",
-    info: "Money Plant is believed to bring good luck. It grows in water or soil with little care."
+    img: "images/money_plant.png",
+    description: "Money Plant is a popular indoor vine believed to bring prosperity.",
+    light: "Bright to low indirect light.",
+    water: "1–2 times per week, can grow in both water and soil.",
+    care: "Prune regularly for bushy growth, change water weekly if grown in jars.",
+    benefits: "Symbol of good luck, easy to grow indoors.",
+    caution: "Mildly toxic to pets if ingested."
   }
 };
 
-// Show Plant Info
+// ✅ Show Plant Info
 function showPlantInfo(plantName) {
+  const plant = plantData[plantName];
   document.getElementById("plantDetailTitle").innerText = plantName;
-  document.getElementById("plantDetailImage").src = plantData[plantName].img;
-  document.getElementById("plantDetailText").innerText = plantData[plantName].info;
+  document.getElementById("plantDetailImage").src = plant.img;
+
+  document.getElementById("plantDetailText").innerHTML = `
+    <p class"desc"><b>Description:</b> ${plant.description}</p>
+    <p><b>Light:</b> ${plant.light}</p>
+    <p><b>Water:</b> ${plant.water}</p>
+    <p><b>Care:</b> ${plant.care}</p>
+    <p><b>Benefits:</b> ${plant.benefits}</p>
+    <p><b>Caution:</b> ${plant.caution}</p>
+  `;
+
   showScreen("plantDetailScreen");
 }
+
 
 // ✅ Auto login
 window.onload = () => {
