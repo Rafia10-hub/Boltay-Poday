@@ -1,26 +1,82 @@
 body {
   font-family: Arial, sans-serif;
-  background: #e8f5e9;
+
   margin: 0;
   padding: 0;
   text-align: center;
+  
 }
 
 h1, h2 {
   color: #2e7d32;
 }
+.auth-content input{
+ background: transparent;
+ color: white;
+}
+
+.bg-home {
+    background: 
+        url("images/main.png"); /* background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.bg-home h1{
+  color: #fff;
+}
 
 .screen {
-  padding: 20px;
-  max-width: 400px;
+  padding: auto;
   margin: 40px auto;
-  background: white;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+
+}
+
+.bg{
+  background:url("images/template.png"); /* background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.logo{
+  width: 30%;
+  height: 30%;
+}
+.content{
+  background: rgba(255,255,255,0.4);
+
+  border-radius: 100px 100px;
+
+}
+.content h2{
+  color:#0F341C;
+}
+
+.content button{
+  opacity: 70%;
+  background: #F1FFDC;
+  color: green;
+  border: dashed;
+  border-radius: 50px;
+  padding: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.content_img{
+  width: 40%;
+  height: 40%;
+
+
 }
 
 .hidden {
   display: none;
+  
 }
 
 input, select, button {
@@ -82,7 +138,7 @@ header {
   margin-top: 8px;
   font-size: 14px;
   color: #333;
-  text-align: left;
+  text-align: center;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -171,9 +227,40 @@ header {
 /* Plant detail */
 .plant-detail {
   margin-top: 20px;
+  color: white;
+
 }
 .plant-detail img {
   width: 100%;
   max-width: 300px;
   border-radius: 12px;
+
+}
+/* Fullscreen video background */
+#bgimage {
+  position: fixed;
+  top: 0;
+  right:0;
+  z-index: -1;         /* push video behind everything */
+  background-size: cover;/* behaves like background-size: cover */
+  background-position: center;
+  background-repeat: no-repeat;
+  
+ 
+}
+
+/* Center form on top of image */
+.auth-content {
+  position: relative;
+  z-index: 1;
+  /
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 300px;
+  margin: auto;
+  
+}
+.desc{
+  color: darkgray;
 }
